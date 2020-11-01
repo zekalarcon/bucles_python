@@ -369,6 +369,14 @@ def ej5():
         )
 
         opcion = int(input('Elija una opcion:\n'))
+
+        if opcion == 3:
+            print('Programa terminado')
+            break
+        if opcion > 3:
+            print('Opcion incorrecta')
+            continue
+          
         
         while len(lista_palabras) < 5:
             palabra = str(input('Ingrese palabras cualesquiera\n'))
@@ -378,23 +386,24 @@ def ej5():
             for palabra in lista_palabras:
                 if palabra_maxima is None or palabra > palabra_maxima:
                     palabra_maxima = palabra
+                lista_palabras =[]    
             print(f'La palabra mayor alfabeticamente es: {palabra_maxima}')
 
         if opcion == 2:
             for palabra in lista_palabras:
                 if palabra_len is None or len(palabra) > palabra_len:
                     palabra_len = len(palabra)
-            print(f'La palabra mas larga contiene {palabra_len} letras')
+                    palabra_larga = palabra
+                lista_palabras = []    
+            print(f'La palabra mas larga {palabra_larga} contiene {palabra_len} letras')
             
-        if opcion == 3:
-            print('Programa terminado')
-            break       
-                                
+         
+
+        
 
 
-                
-                
-             
+
+
 
 
 
